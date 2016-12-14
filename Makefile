@@ -6,7 +6,7 @@ resume-verbose.pdf: resume.tex
 	rm -f *.{aux,log,out}
 
 resume.pdf: resume-verbose.pdf
-	 gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dNOPAUSE -dQUIET -dBATCH -sOutputFile=$@ $<
-	 rm $<
+	gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dNOPAUSE -dQUIET -dBATCH -sOutputFile=$@ $<
+	rm $<
 
 .PHONY: all
