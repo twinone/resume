@@ -1,12 +1,12 @@
 all: resume.pdf
 
-resume-verbose.pdf: resume.tex
-	pdflatex $< >/dev/null
-	mv resume.pdf $@
-	rm -f *.{aux,log,out}
+verb = resume-verbose.pdf
 
-resume.pdf: resume-verbose.pdf
-	gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dNOPAUSE -dQUIET -dBATCH -sOutputFile=$@ $<
-	rm $<
+resume.pdf: resume.tex
+	pdflatex $< >/dev/null
+	mv resume.pdf ${verb}
+	rm -f *.{aux,log,out}
+	gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dNOPAUSE -dQUIET -dBATCH -sOutputFile=$@ ${verb}
+	rm ${verb}
 
 .PHONY: all
