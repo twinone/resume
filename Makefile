@@ -1,4 +1,7 @@
-all: resume.pdf
+all: resume.pdf clean
+clean:
+	rm -f resume.out resume.log resume.aux
+
 
 verb = resume-verbose.pdf
 
