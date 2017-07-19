@@ -11,6 +11,13 @@
 \definecolor{linkcolour}{rgb}{0,0.2,0.6}
 \hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour}
 
+
+
+% remove the dots at the end of a cventry
+\usepackage{xpatch}
+\xpatchcmd\cventry{.}{}{}{}
+
+
 \renewcommand*{\emailsymbol}{}
 \renewcommand*{\homepagesymbol}{}
 
@@ -25,40 +32,84 @@
 \makecvtitle
 \vspace{-1cm}
 
-\section{Experience}
-\cventry{2013\\present}{Freelance Android Developer}{}{}{}{
-\begin{itemize}
-\item[•] {\href{https://play.google.com/store/apps/details?id=org.twinone.irremote}
-{Universal TV Remote} - \textit{1.500.000 installs}, TV Remote using the phone’s IR-blaster}
-\item[•] {\href{https://play.google.com/store/apps/details?id=org.twinone.intruderselfie}
-{Intruder Selfie} - \textit{500.000 installs}, Takes a picture when somebody fails to unlock your phone}
-\end{itemize}
-}
-
 \section{Education}
 \cventry{2014 - 2018}{B.S. Computer Engineering}{\href{https://www.fib.upc.edu/}{UPC BarcelonaTech}}{Barcelona}{}{
 Specializing in Computing (Theory of Computation, Algorithms, Compilers, Artificial Intelligence)}
 
-\section{Side projects}
-\cvline{2016 - 2017}{\href{https://twinone.github.io/rubik-web}{Rubik Web} - Interactive Rubik's Cube}
-\cvline{2015 - 2016}{\href{https://github.com/twinone/rubik-robot}{Rubik Robot} - Self designed and 3D-printed Rubik's Cube solving robot}
-\cvline{2017}{\href{https://github.com/twinone/logsolve}{logsolve} - Computer vision based logic game solver}
+
+
+
+\section{Projects}
+\cventry{2015 - 2017}{
+    \href{https://play.google.com/store/apps/details?id=org.twinone.irremote}
+    {Universal TV Remote} - \textit{1.5M installs}}{}{}{}{
+\begin{itemize}
+\item[•] {Developed TV Remote app using the phone’s built-in IR-blaster}
+\item[•] {Reverse engineered IR codes for air conditioner signals and less well-known brands}
+\end{itemize}
+}
+
+\cventry{2015 - 2017}{
+    \href{https://play.google.com/store/apps/details?id=org.twinone.intruderselfie}
+    {Intruder Selfie} - \textit{500K installs}}{}{}{}{
+\begin{itemize}
+\item[•] {Developed app that takes a picture when somebody fails to unlock your device}
+\end{itemize}
+}
+
+\cventry{2017}{
+    \href{https://github.com/twinone/logsolve}
+    {logsolve}}{}{}{}{
+\begin{itemize}
+\item[•] {Logic game (sudoku-like) solver using computer vision and constraint programming}
+\item[•] {Solves games on a phone using a capacitive pen attached to a 3D printer}
+\end{itemize}
+}
+
+
+\cventry{2016 - 2017}{
+    \href{https://github.com/twinone/rubik-robot}
+    {Rubik Robot}}{}{}{}{
+\begin{itemize}
+\item[•] {Self designed and 3D-printed Rubik’s Cube robot solver with over 40 parts}
+\item[•] {Iterated over 20+ designs and built solver using clustering and CV algorithms}
+\end{itemize}
+}
+
+
+\cventry{2016}{
+    \href{https://github.com/twinone/rubik-web}
+    {Rubik Web}}{}{}{}{
+\begin{itemize}
+\item[•] {Built an interactive Rubik’s Cube solver for the web}
+\item[•] {Using Three.js for rendering and custom algorithms for solving the cube}
+\end{itemize}
+}
+
+
+
+
+
+\section{Awards}
+\cvline{2017}{\textbf{Bloomberg prize} - CopenHacks \textit{(Denmark)}}
+\cvline{2017}{\textbf{Bosch prize} - StartHack \textit{(Switzerland)}}
+\cvline{2016}{\textbf{Microsoft prize} - Junction \textit{(Finland)}}
+\cvline{2015}{\textbf{1st prize} - HackForGood \textit{(Spain)}}
 
 
 \section{Programming languages}
-\cvline{Comfortable}{Java, C, C++, Go, JavaScript, Python}
-\cvline{Familiar}{Haskell, Prolog, Shell, PHP}
+\cvline{Proficient}{Go, Java, C, C++, JavaScript, Python}
+\cvline{Familiar}{Haskell, Prolog, Shell}
 
 \section{Tools}
 \cvline{Git}{Experienced with branches, merges, rebasing, etc}
 \cvline{Linux}{Used Linux as primary OS for years (Debian, Ubuntu)}
 
+
 \section{Skills}
-\cvline{Testing}{Familiar with basic unit testing}
-\cvline{Teamwork}{Assisted to multiple \href{https://devpost.com/twinone}{hackathons}}
 \cvline{Teaching}{Member of \href{https://jediupc.com}{Jedi UPC}, a university teaching non-profit}
 \cvline{Leadership}{Founded \href{https://robotsupc.github.io}{RobotsUPC}, a university robotics non-profit}
 \cvline{Research}{Member of \href{https://cosmicresearch.org}{Cosmic Research}, a university space research association}
-\cvline{Languages}{Proficient in English, native in Spanish and Dutch}
+\cvline{Languages}{Fluent in English, native in Spanish and Dutch}
 
 \end{document}
