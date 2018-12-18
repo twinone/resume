@@ -11,8 +11,8 @@
 \definecolor{linkcolour}{rgb}{0,0.2,0.6}
 \hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour}
 
-
-
+% if you want to change the width of the column with the dates
+\setlength{\hintscolumnwidth}{2.5cm}
 % remove the dots at the end of a cventry
 \usepackage{xpatch}
 \xpatchcmd\cventry{.}{}{}{}
@@ -32,8 +32,29 @@
 \makecvtitle
 \vspace{-1cm}
 
+
+\section{Experience}
+
+\cventry{Oct 2017\\present}{Backend engineer}{\href{http://fyusion.com/}{Fyusion, Inc}}{San Francisco, CA}{}{
+\begin{itemize}
+\item[•] {Improving and maintaining scalable backend systems in Go}
+\item[•] {Designed a custom binary format with 46\% better performance than general purpose compression}
+\end{itemize}
+}
+
+
+\cventry{Aug 2017\\Oct 2017}{Mobile \& backend engineer}{\href{http://www.bosch.ch/}{Bosch}}{Switzerland}{}{
+\begin{itemize}
+\item[•] {Working on the connected car project of the Bosch IoT Lab}
+\item[•] {Collecting, processing and sending in-car data and analytics on Android phones}
+\end{itemize}
+}
+
+
+
+
 \section{Education}
-\cventry{2014 - 2018}{B.S. Computer Engineering}{\href{https://www.fib.upc.edu/}{UPC BarcelonaTech}}{Barcelona}{}{
+\cventry{2014 - 2019}{B.S. Computer Engineering}{\href{https://www.fib.upc.edu/}{UPC BarcelonaTech}}{Barcelona, Spain}{}{
 Specializing in Computing (Theory of Computation, Algorithms, Compilers, Artificial Intelligence)}
 
 
@@ -42,18 +63,30 @@ Specializing in Computing (Theory of Computation, Algorithms, Compilers, Artific
 \section{Projects}
 \cventry{2015 - 2017}{
     \href{https://play.google.com/store/apps/details?id=org.twinone.irremote}
-    {Universal TV Remote} - \textit{1.5M installs}}{}{}{}{
+    {Universal TV Remote} - \textit{2M installs}}{}{}{}{
 \begin{itemize}
 \item[•] {Developed Android remote control app using the phone’s built-in IR-blaster}
-\item[•] {Reverse engineered IR codes for air conditioner signals and less well-known brands}
+\item[•] {Reverse engineered IR codes for tv and air conditioner signals of less well-known brands}
 \end{itemize}
 }
 
 \cventry{2015 - 2017}{
     \href{https://play.google.com/store/apps/details?id=org.twinone.intruderselfie}
-    {Intruder Selfie} - \textit{500K installs}}{}{}{}{
+    {Intruder Selfie} - \textit{1M installs}}{}{}{}{
 \begin{itemize}
 \item[•] {Developed Android app that takes a picture when somebody fails to unlock your device}
+\end{itemize}
+}
+
+\section{Open-source}
+
+
+\cventry{2016 - 2017}{
+    \href{https://github.com/twinone/rubik-robot}
+    {Rubik Robot}}{}{}{}{
+\begin{itemize}
+\item[•] {Self designed and 3D-printed Rubik’s Cube robot solver with over 40 parts}
+\item[•] {Iterated over 20+ designs and built solver using clustering and CV algorithms}
 \end{itemize}
 }
 
@@ -66,15 +99,6 @@ Specializing in Computing (Theory of Computation, Algorithms, Compilers, Artific
 \end{itemize}
 }
 
-
-\cventry{2016 - 2017}{
-    \href{https://github.com/twinone/rubik-robot}
-    {Rubik Robot}}{}{}{}{
-\begin{itemize}
-\item[•] {Self designed and 3D-printed Rubik’s Cube robot solver with over 40 parts}
-\item[•] {Iterated over 20+ designs and built solver using clustering and CV algorithms}
-\end{itemize}
-}
 
 
 \cventry{2016}{
@@ -96,18 +120,17 @@ Specializing in Computing (Theory of Computation, Algorithms, Compilers, Artific
 \cvline{2016}{\textbf{Microsoft prize} - Junction \textit{(Finland)}}
 \cvline{2015}{\textbf{1st prize} - HackForGood \textit{(Spain)}}
 
-
-\section{Programming languages}
-\cvline{Proficient}{Go, Java, C, C++, JavaScript, Python}
-\cvline{Familiar}{Haskell, Prolog, Shell}
-
-\section{Tools}
+\section{Programming languages \& Tools}
+\cvline{Languages}{
+    \textit{Comfortable}: Go, Java, C, C++, JavaScript, Python.
+    \textit{Familiar}: Haskell, Prolog, Shell
+}
 \cvline{Git}{Experienced with branches, merges, rebasing, etc}
 \cvline{Linux}{Used Linux as primary OS for years (Debian, Ubuntu)}
 
 
 \section{Skills}
-\cvline{Teaching}{Member of \href{https://jediupc.com}{Jedi UPC}, a university teaching non-profit}
+\cvline{Teaching}{Member of \href{https://jediupc.com}{Jedi UPC}, a university teaching and projects non-profit}
 \cvline{Leadership}{Founded \href{https://robotsupc.github.io}{RobotsUPC}, a university robotics non-profit}
 \cvline{Research}{Member of \href{https://cosmicresearch.org}{Cosmic Research}, a university space research association}
 \cvline{Languages}{Fluent in English, native in Spanish and Dutch}
